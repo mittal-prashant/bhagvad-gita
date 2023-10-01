@@ -151,13 +151,6 @@ python ingest.py
 - `run.sh` file is a bash file, which can be easily run in the Linux to avoid any errors in commands and directly run docker container.
 - `deployment.yaml` is a manifest file for Kubernetes cluster, it stores the no of replica count, type of service and other meta data for running a service on Kubernetes cluster.
 
-## Extensions
-
-- You can find a more advanced version of the project on [my github](https://github.com/mittal-prashant/Offline-GPT).
-- It has further features for multi user, using logout, login system helpful for an organization.
-- It keeps tracks of the users login and logout time with the documents uploaded.
-- It consists of features for multi project support and add new files support, along with summary for a particular file.
-
 ## Learnings
 
 You can find answer to every problem inside Bhagvat Gita, you just have to be look inside it and be patient.
