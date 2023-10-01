@@ -26,4 +26,4 @@ jobs:
         run: docker tag bhagvad-gita-gpt ${{ secrets.DOCKER_USERNAME }}/bhagvad-gita-gpt
 
       - name: Publish Docker image
-        run: docker publish -p ${{ secrets.DOCKER_USERNAME }}/bhagvat-gita-gpt
+        run: docker push -p ${{ secrets.DOCKER_USERNAME }}/bhagvat-gita-gpt
