@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request, redirect
 import os
-from askLLM import ask_question
+from askKrishna import ask_question
 
 app = Flask(__name__)
 
@@ -91,4 +91,4 @@ def reset_queries():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
