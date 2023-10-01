@@ -20,7 +20,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t bhagvad-gita .
+        run: docker build -t bhagvad-gita-gpt .
 
-      - name: Run Docker Container
-        run: docker run -p 5000:5000 --name bhagvad-gita bhagvad-gita
+      - name: Tag Docker image
+        run: docker tag bhagvad-gita-gpt ${{ secrets.DOCKER_USERNAME }}/bhagvad-gita-gpt
+
+      - name: Publish Docker image
+        run: docker publish -p ${{ secrets.DOCKER_USERNAME }}/bhagvat-gita-gpt
