@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bhagvad-gita-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: bhagvad-gita
+  template:
+    metadata:
+      labels:
+        app: bhagvad-gita
+    spec:
+      containers:
+        - name: bhagvad-gita-container
+          image: mittalprashant/bhagvad-gita-gpt:latest
+          ports:
+            - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bhagvad-gita-service
+spec:
+  selector:
+    app: bhagvad-gita
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: NodePort
