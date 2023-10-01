@@ -151,6 +151,12 @@ python ingest.py
 - `run.sh` file is a bash file, which can be easily run in the Linux to avoid any errors in commands and directly run docker container.
 - `deployment.yaml` is a manifest file for Kubernetes cluster, it stores the no of replica count, type of service and other meta data for running a service on Kubernetes cluster.
 
+## Deployment
+
+The application is deployed using Google Cloud Platform in `asia-south1` region on a Kubernetes cluster with 4 pods. The resources are only of Free Tier so it may be slow than running at Localhost.
+
+Link to the website: http://34.93.219.52:5000/home
+
 ## Learnings
 
 You can find answer to every problem inside Bhagvat Gita, you just have to be look inside it and be patient.
