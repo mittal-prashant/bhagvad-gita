@@ -6,6 +6,12 @@ Ask questions to Lord Krishna using the power of Meta's Llama 2 7b LLM. You can 
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
 
+## Deployment on GCP(Google Cloud Platform)
+
+The application is deployed using Google Cloud Platform in `asia-south1` region on a Kubernetes cluster with 4 pods. The resources are only of Free Tier so it may be slow than running at Localhost.
+
+Link to the website: http://34.93.219.52:5000/home
+
 ## Running Container on Docker
 
 ### Environment Setup
@@ -150,12 +156,6 @@ python ingest.py
 - `.github/workflows/deploy.yml` tells the Github actions to run a workflow based on the steps mentioned inside the deploy.yml, then it creates an image and push it on Docker Hub.
 - `run.sh` file is a bash file, which can be easily run in the Linux to avoid any errors in commands and directly run docker container.
 - `deployment.yaml` is a manifest file for Kubernetes cluster, it stores the no of replica count, type of service and other meta data for running a service on Kubernetes cluster.
-
-## Deployment
-
-The application is deployed using Google Cloud Platform in `asia-south1` region on a Kubernetes cluster with 4 pods. The resources are only of Free Tier so it may be slow than running at Localhost.
-
-Link to the website: http://34.93.219.52:5000/home
 
 ## Learnings
 
